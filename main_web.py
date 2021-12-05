@@ -40,7 +40,8 @@ def weather_message(message):
 def reg_city(message):
     global city
     city = message.text
-    bot.send_message(message.chat.id, 'отлично\nты так же можешь использовать командк /start для изменения города')
+    bot.send_message(message.chat.id, f'отлично{message.first_name}\nты так же можешь использовать команду'
+                                      f' /start для изменения города')
 
 
 @app.route('/' + TOKEN, methods=['POST'])
